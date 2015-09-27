@@ -1,0 +1,15 @@
+{
+    "phones":
+    [
+        {
+            "name": "GHQ",
+            "phone":"3 9121",
+            "team": "WIT"
+        },
+        {
+            "name": "BTZ",
+            "phone":"3 8780",
+            "team": "DR"
+        }
+    ]
+}

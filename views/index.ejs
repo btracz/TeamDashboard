@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" ng-app="dashboard" class="no-js"> <!--<![endif]-->
+<html xmlns:ng="http://angularjs.org" ng-app="dashboard">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard CdS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <!-- bower:css -->
+    <!-- endbower -->
+  </head>
+  <body ng-controller="myAppController">
+    <div class="container">
+      *Modifications non enregistrées <button title="Envoyer les modifications" ng-click="sendData(phones)">Sauvegarder</button>
+      <div id="theme_select">
+        <label for="theme">Choisir un thème :</label>
+        <select id="theme">
+          <option>thème 1</option>
+          <option>thème 2</option>
+        </select>
+      </div>
+      <div id="title">
+        <h1><%= title %></h1>
+        <select id="dashboardname">
+          <option>ADAM</option>
+          <option>DR</option>
+          <option>REACTIV</option>
+          <option>SUE</option>
+          <option>WIT</option>
+        </select>
+      </div>
+      <div class="row">
+        <db-list items="phones"></db-list>
+        <!-- Colonne exemple 1 -->
+        <div class="col-md-3">
+          <ul>
+            <li>
+              <a href="#">Lien 1</a>
+            </li>
+            <li>
+              <a href="#">Lien 2</a>
+            </li>
+            <li>
+              <a href="#">Lien 3</a>
+            </li>
+            <li>
+              <a href="#">Lien 4</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Fin colonne exemple 1 -->
+        <!-- Colonne exemple 2 -->
+        <div class="col-md-3">
+          <h2>Titre 1</h2>
+          <ul>
+            <li>
+              Texte 1
+              <a href="#">Lien 1</a>
+              <a href="#">Lien 1 bis</a>
+            </li>
+            <li>
+              Texte 2
+              <a href="#">Lien 2</a>
+            </li>
+            <li>
+              Texte 3
+              <a href="#">Lien 3</a>
+              <a href="#">Lien 3 bis</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Fin colonne exemple 2 -->
+        <!-- Colonne exemple 3 -->
+        <div class="col-md-3">
+          <p>
+            HTML Full custom
+          </p>
+        </div>
+        <!-- Fin colonne exemple 3 -->
+      </div>
+      <div class="row">
+        <div class="col-md-3 newblock">
+          Ajouter un nouveau bloc
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+    <!-- endbower -->
+
+    <script src="javascripts/services/data.factory.js"></script>
+    <script src="javascripts/list/list.module.js"></script>
+    <script src="javascripts/app.module.js"></script>
+  </body>
+</html>

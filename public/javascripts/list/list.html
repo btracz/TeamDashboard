@@ -1,0 +1,15 @@
+<div class="col-md-3">
+    <ul>
+        <li ng-repeat="item in items" class="{{item.team}}"><span>{{item.name}}</span> : <span>{{item.phone}}</span></li>
+    </ul>
+    <form name="itemsForm" ng-submit="addListItem()" ng-show="edition">
+        <input type="text" ng-model="item.name" placeholder="Trigramme" />
+        <input type="text" ng-model="item.phone" placeholder="Téléphone" />
+        <select ng-model="item.team">
+            <option value="0">WIT</option>
+            <option value="1">DR</option>
+            <option value="2">ADAM</option>
+        </select>
+        <input type="submit" title="Ajouter" value="Ajouter" />
+    </form>
+</div>

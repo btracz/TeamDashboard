@@ -1,0 +1,48 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.container {
+    width: 95%;
+}
+
+#theme_select{
+    float: right;
+}
+
+#title{
+    text-align: center;
+}
+
+#title h1{
+    display: inline;
+}
+
+#title > select {
+    border: medium none;
+    font-size: 36px;
+}
+
+.row {
+    display: table;
+}
+
+[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.newblock{
+    border: 4px dashed lightgray;
+    color: lightgray;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 30px;
+}

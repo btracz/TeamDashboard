@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     // Les imports
     grunt.loadNpmTasks('grunt-contrib-watch') ;     // MAJ quand modifications sur un fichier
     grunt.loadNpmTasks('grunt-wiredep');            // Injection des composants Bower automatiquement avec Grunt
+    grunt.loadNpmTasks('grunt-bootlint');
 
 
     // Configuration de Grunt
@@ -32,7 +33,16 @@ module.exports = function(grunt) {
                 files: ['public/bower_components/**/*.js'],
                 tasks: ['wiredep']
             }
+        },
+
+        bootlint: {
+            options: {
+                stoponerror: false,
+                relaxerror: []
+            },
+            files: ['views/**/*.ejs', '!**/error.ejs']
         }
+
     });
 
     // Tâche par défaut : grunt

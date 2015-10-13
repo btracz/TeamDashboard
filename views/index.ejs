@@ -10,197 +10,195 @@
 <html lang="fr" ng-app="dashboard" class="no-js"> <!--<![endif]-->
 <html xmlns:ng="http://angularjs.org" ng-app="dashboard">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dashboard CdS</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
-    <!-- endbower -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard CdS</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <!-- bower:css -->
+  <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
+  <!-- endbower -->
 </head>
 <body ng-controller="myAppController">
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><%= title %></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-            <button type="button" class="btn btn-default navbar-btn active"> ADAM</button>
-            <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-picture"
-                                                                           aria-hidden="true"></span> DR
-            </button>
-            <button type="button" class="btn btn-default navbar-btn"> WIT</button>
-            <button type="button" class="btn btn-default navbar-btn"> REACTIV</button>
-            <button type="button" class="btn btn-default navbar-btn"> SUE</button>
-            <button type="button" class="btn btn-default navbar-btn"> NOEMIE</button>
-        </div>
-        <!-- /.navbar-collapse -->
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><%= title %></a>
     </div>
-    <!-- /.container-fluid -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <button type="button" class="btn btn-default navbar-btn active"><span class="glyphicon glyphicon-modal-window"
+                                                                            aria-hidden="true"></span> ADAM
+      </button>
+      <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-picture"
+                                                                     aria-hidden="true"></span> DR
+      </button>
+      <button type="button" class="btn btn-default navbar-btn"> WIT</button>
+      <button type="button" class="btn btn-default navbar-btn"> REACTIV</button>
+      <button type="button" class="btn btn-default navbar-btn"> SUE</button>
+      <button type="button" class="btn btn-default navbar-btn"> NOEMIE</button>
+      <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-plus"
+                                                                     aria-hidden="true"></span></button>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+             aria-expanded="false">Thème <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="#">Classique</a></li>
+            <li><a href="#">Dark</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>
 <div class="container-fluid">
-    <!--*Modifications non enregistrées-->
-    <!--<button title="Envoyer les modifications" ng-click="sendData(phones)">Sauvegarder</button>-->
-    <!--<div id="theme_select">-->
-    <!--<label for="theme">Choisir un thème :</label>-->
-    <!--<select id="theme">-->
-    <!--<option>thème 1</option>-->
-    <!--<option>thème 2</option>-->
-    <!--</select>-->
-    <!--</div>-->
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
+  <div class="row">
+    <db-list items="phones"></db-list>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-move"
+                                        aria-hidden="true"></span> Titre
+            <span class="glyphicon glyphicon-minus-sign right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-cog right" style="float: right" aria-hidden="true"></span></h3>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+          ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+          tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+          Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+          lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
-                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
-                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
-                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
-                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="row">
-        <db-list items="phones"></db-list>
-        <!-- Colonne exemple 1 -->
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <ul>
-                <li>
-                    <a href="#">Lien 1</a>
-                </li>
-                <li>
-                    <a href="#">Lien 2</a>
-                </li>
-                <li>
-                    <a href="#">Lien 3</a>
-                </li>
-                <li>
-                    <a href="#">Lien 4</a>
-                </li>
-            </ul>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-align-justify"
+                                        aria-hidden="true"></span> Titre 1
+            <span class="glyphicon glyphicon-remove-circle right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-wrench right" style="float: right" aria-hidden="true"></span></h3>
         </div>
-        <!-- Fin colonne exemple 1 -->
-        <!-- Colonne exemple 2 -->
-        <div class="col-md-3">
-            <h2>Titre 1</h2>
-            <ul>
-                <li>
-                    Texte 1
-                    <a href="#">Lien 1</a>
-                    <a href="#">Lien 1 bis</a>
-                </li>
-                <li>
-                    Texte 2
-                    <a href="#">Lien 2</a>
-                </li>
-                <li>
-                    Texte 3
-                    <a href="#">Lien 3</a>
-                    <a href="#">Lien 3 bis</a>
-                </li>
-            </ul>
+        <div class="panel-body">
+          <ul>
+            <li>
+              <a href="#">Lien 1</a>
+            </li>
+            <li>
+              <a href="#">Lien 2</a>
+            </li>
+            <li>
+              <a href="#">Lien 3</a>
+            </li>
+            <li>
+              <a href="#">Lien 4</a>
+            </li>
+          </ul>
         </div>
-        <!-- Fin colonne exemple 2 -->
-        <!-- Colonne exemple 3 -->
-        <div class="col-md-3">
-            <p>
-                HTML Full custom
-            </p>
-        </div>
-        <!-- Fin colonne exemple 3 -->
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-3 newblock">
-            Ajouter un nouveau bloc
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-list"
+                                        aria-hidden="true"></span> Titre 2
+            <span class="glyphicon glyphicon-remove right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-edit right" style="float: right" aria-hidden="true"></span></h3>
         </div>
-        <div class="col-md-3">
+        <div class="panel-body">
+          <ul>
+            <li>
+              Texte 1
+              <a href="#">Lien 1</a>
+              <a href="#">Lien 1 bis</a>
+            </li>
+            <li>
+              Texte 2
+              <a href="#">Lien 2</a>
+            </li>
+            <li>
+              Texte 3
+              <a href="#">Lien 3</a>
+              <a href="#">Lien 3 bis</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
+      </div>
     </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-menu-hamburger"
+                                        aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-remove-sign right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-pencil right" style="float: right" aria-hidden="true"></span></h3>
+        </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+          ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+          tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+          Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+          lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-option-vertical"
+                                        aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-pencil right" style="float: right" aria-hidden="true"></span></h3>
+        </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+          ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+          tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+          Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+          lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-option-vertical"
+                                        aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-pencil right" style="float: right" aria-hidden="true"></span></h3>
+        </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+          ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+          tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+          Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+          lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 newblock">
+      Ajouter un nouveau bloc
+    </div>
+  </div>
 </div>
-
+<footer class="footer">
+  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Modifications non enregistrées
+  <button type="button" class="btn btn-default navbar-btn" title="Envoyer les modifications"
+          ng-click="sendData(phones)"><span class="glyphicon glyphicon-floppy-save"
+                                            aria-hidden="true"></span> Sauvegarder
+  </button>
+</footer>
 <!-- Scripts -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -210,7 +208,6 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbower -->
-
 <script src="javascripts/services/data.factory.js"></script>
 <script src="javascripts/list/list.module.js"></script>
 <script src="javascripts/app.module.js"></script>

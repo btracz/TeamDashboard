@@ -1,114 +1,218 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="fr" ng-app="dashboard" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard"
+      class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="fr" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="dashboard" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="fr" ng-app="dashboard" class="no-js"> <!--<![endif]-->
 <html xmlns:ng="http://angularjs.org" ng-app="dashboard">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dashboard CdS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
     <!-- endbower -->
-  </head>
-  <body ng-controller="myAppController">
-    <div class="container">
-      *Modifications non enregistrées <button title="Envoyer les modifications" ng-click="sendData(phones)">Sauvegarder</button>
-      <div id="theme_select">
-        <label for="theme">Choisir un thème :</label>
-        <select id="theme">
-          <option>thème 1</option>
-          <option>thème 2</option>
-        </select>
-      </div>
-      <div id="title">
-        <h1><%= title %></h1>
-        <select id="dashboardname">
-          <option>ADAM</option>
-          <option>DR</option>
-          <option>REACTIV</option>
-          <option>SUE</option>
-          <option>WIT</option>
-        </select>
-      </div>
-      <div class="row">
+</head>
+<body ng-controller="myAppController">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><%= title %></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <button type="button" class="btn btn-default navbar-btn active"> ADAM</button>
+            <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-picture"
+                                                                           aria-hidden="true"></span> DR
+            </button>
+            <button type="button" class="btn btn-default navbar-btn"> WIT</button>
+            <button type="button" class="btn btn-default navbar-btn"> REACTIV</button>
+            <button type="button" class="btn btn-default navbar-btn"> SUE</button>
+            <button type="button" class="btn btn-default navbar-btn"> NOEMIE</button>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+    <!--*Modifications non enregistrées-->
+    <!--<button title="Envoyer les modifications" ng-click="sendData(phones)">Sauvegarder</button>-->
+    <!--<div id="theme_select">-->
+    <!--<label for="theme">Choisir un thème :</label>-->
+    <!--<select id="theme">-->
+    <!--<option>thème 1</option>-->
+    <!--<option>thème 2</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porttitor ornare. Vivamus eu
+                    ante at eros tempor ultrices non sit amet nunc. Etiam accumsan, nisi et congue pretium, odio eros
+                    tempus nisi, ac feugiat ligula turpis eget tortor. Aenean et tempus nisi. In et ultrices lacus.
+                    Suspendisse molestie tortor arcu, et varius arcu laoreet blandit. Nulla scelerisque nulla vitae
+                    lacus ullamcorper, vitae suscipit mi bibendum. Etiam ut elit in magna tincidunt sodales.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <db-list items="phones"></db-list>
         <!-- Colonne exemple 1 -->
-        <div class="col-md-3">
-          <ul>
-            <li>
-              <a href="#">Lien 1</a>
-            </li>
-            <li>
-              <a href="#">Lien 2</a>
-            </li>
-            <li>
-              <a href="#">Lien 3</a>
-            </li>
-            <li>
-              <a href="#">Lien 4</a>
-            </li>
-          </ul>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <ul>
+                <li>
+                    <a href="#">Lien 1</a>
+                </li>
+                <li>
+                    <a href="#">Lien 2</a>
+                </li>
+                <li>
+                    <a href="#">Lien 3</a>
+                </li>
+                <li>
+                    <a href="#">Lien 4</a>
+                </li>
+            </ul>
         </div>
         <!-- Fin colonne exemple 1 -->
         <!-- Colonne exemple 2 -->
         <div class="col-md-3">
-          <h2>Titre 1</h2>
-          <ul>
-            <li>
-              Texte 1
-              <a href="#">Lien 1</a>
-              <a href="#">Lien 1 bis</a>
-            </li>
-            <li>
-              Texte 2
-              <a href="#">Lien 2</a>
-            </li>
-            <li>
-              Texte 3
-              <a href="#">Lien 3</a>
-              <a href="#">Lien 3 bis</a>
-            </li>
-          </ul>
+            <h2>Titre 1</h2>
+            <ul>
+                <li>
+                    Texte 1
+                    <a href="#">Lien 1</a>
+                    <a href="#">Lien 1 bis</a>
+                </li>
+                <li>
+                    Texte 2
+                    <a href="#">Lien 2</a>
+                </li>
+                <li>
+                    Texte 3
+                    <a href="#">Lien 3</a>
+                    <a href="#">Lien 3 bis</a>
+                </li>
+            </ul>
         </div>
         <!-- Fin colonne exemple 2 -->
         <!-- Colonne exemple 3 -->
         <div class="col-md-3">
-          <p>
-            HTML Full custom
-          </p>
+            <p>
+                HTML Full custom
+            </p>
         </div>
         <!-- Fin colonne exemple 3 -->
-      </div>
-      <div class="row">
-        <div class="col-md-3 newblock">
-          Ajouter un nouveau bloc
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
-      </div>
     </div>
+    <div class="row">
+        <div class="col-md-3 newblock">
+            Ajouter un nouveau bloc
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
 
-    <!-- Scripts -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
-    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <!-- endbower -->
+<!-- Scripts -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower -->
 
-    <script src="javascripts/services/data.factory.js"></script>
-    <script src="javascripts/list/list.module.js"></script>
-    <script src="javascripts/app.module.js"></script>
-  </body>
+<script src="javascripts/services/data.factory.js"></script>
+<script src="javascripts/list/list.module.js"></script>
+<script src="javascripts/app.module.js"></script>
+</body>
 </html>

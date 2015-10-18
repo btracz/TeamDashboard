@@ -3,8 +3,28 @@ body {
     padding-top: 70px;
 }
 
-.right{
+.right-icon{
     float: right;
+    padding: 0 0 0 5px;
+    cursor: pointer;
+}
+
+.left-icon{
+    float: left;
+    padding: 0 5px 0 0;
+    cursor: grab;
+}
+
+.panel-heading{
+    min-height: 40px;
+}
+
+.panel-head-form{
+    float: left;
+}
+
+.panel-head-form > input{
+    height: 24px;
 }
 
 .newblock {

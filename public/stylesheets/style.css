@@ -13,6 +13,8 @@ body {
     float: left;
     padding: 0 5px 0 0;
     cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
 }
 
 .panel-heading{
@@ -27,13 +29,29 @@ body {
     height: 24px;
 }
 
+.panel{
+    height: 350px;
+    overflow: auto;
+}
+
 .newblock {
-    border: 4px dashed lightgray;
+    border: 4px dashed lightgray!important;
     color: lightgray;
     cursor: pointer;
     font-size: x-large;
     font-weight: bold;
-    padding: 30px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-inline > .form-group{
+    max-width: 25%;
+}
+
+.form-inline > .form-group > input{
+    max-width: 100%;
 }
 
 .footer {
